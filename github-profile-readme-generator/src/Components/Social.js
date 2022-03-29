@@ -7,7 +7,6 @@ const Social = () => {
     let rows = [];
 
     const [input, setInput] = useState('');
-
     let userInput = [];
 
     for (let i = 1; i < col1.length; i++) {
@@ -21,7 +20,6 @@ const Social = () => {
                            onChange={
                                (e) => {
                                    setInput(e.target.value);
-                                   userInput.push(e.target.value);
                                }
                            }
                     />
@@ -32,7 +30,8 @@ const Social = () => {
                            className="form-control"
                            placeholder={col2[i]}
                            onChange={(e) => {
-                               setInput(e.target.value)
+                               setInput(e.target.value);
+                               userInput.push(e.target.value);
                            }}
                     />
                 </div>
