@@ -4,7 +4,7 @@ const submit = () => {
             <div className="container my-5">
                 <h4 className='text-center'>Download File Here</h4>
                 <div className="justify-content-center d-flex">
-                    <button className='btn btn-primary btn-lg'>Download</button>
+                    <button type="submit" className='btn btn-primary btn-lg'>Download</button>
                 </div>
             </div>
         </>

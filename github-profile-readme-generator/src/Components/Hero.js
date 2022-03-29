@@ -9,13 +9,23 @@ import Testing from "./Testing";
 import SubmitF from "./SubmitF";
 
 const Hero = () => {
+    let formInfo = {
+        greeting: '',
+        subtitle: '',
+    }
+
+    let setData = (data) => {
+        formInfo.greeting = data[0];
+        formInfo.subtitle = data[1];
+    }
     return(<>
         <div className="container">
             <h1 className='font-weight-bold text-center'>Github Readme Generator</h1>
             <p className={'text-center lead'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <hr/>
             <h3 className='font-weight-bold'>Greeting/Opener</h3>
-        <Header/>
+        <Header onSubmit={setData}/>
+
             <h3 className="mt-5 font-weight-bold ">Programming Languages</h3>
             <hr/>
             <ProgrammingLanguages/>
