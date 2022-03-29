@@ -27,15 +27,16 @@ const ProgrammingLanguages = () => {
         new Array(languages.length).fill(false));
     console.log(checkedState);
 
-        for (let i = 1; i < languages.length; i++) {
+        for (let i = 0; i < languages.length; i++) {
             rows.push(
                 <div className="form-check form-check-inline">
                     <input className="form-check-input"
                            type="checkbox" id={languages[i]}
                            value={languages[i]}
                            checked={checkedState[i]}
-                           onChange={(i) => {
-                               setCheckedState(checkedState[i] = true)
+                           onChange={() => {
+                               checkedState[i] = true;
+                               setCheckedState(checkedState)
                                console.log(checkedState)
                            }}
                     />
