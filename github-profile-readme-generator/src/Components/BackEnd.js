@@ -13,7 +13,6 @@ const BackEnd = () => {
     }
     return (
         <>
-            <div className='display-4'>BackEnd Development</div>
             {rows}
         </>
     )

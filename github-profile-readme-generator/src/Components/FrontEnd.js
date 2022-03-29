@@ -25,7 +25,6 @@ const FrontEnd = () => {
     }
     return (
         <>
-            <div className='display-4'>Front End</div>
             {rows}
         </>
     )

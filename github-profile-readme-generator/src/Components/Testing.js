@@ -13,7 +13,6 @@ const Testing = () => {
     }
     return (
         <>
-            <div className='display-4'>Testing</div>
             {rows}
         </>
     )

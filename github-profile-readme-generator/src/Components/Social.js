@@ -6,8 +6,8 @@ const Social = () => {
     let col2 = ["Instagram", "HackerRank", "CodeWars"];
     let rows = [];
 
-    const [input, setInput] = useState('');
-    let userInput = [];
+    const [input, setInput] = useState([]);
+    console.log(input);
 
     for (let i = 1; i < col1.length; i++) {
         rows.push(
@@ -19,7 +19,7 @@ const Social = () => {
                            placeholder={col1[i]}
                            onChange={
                                (e) => {
-                                   setInput(e.target.value);
+                                   setInput(arr => [...arr, e.target.value]);
                                }
                            }
                     />
@@ -30,18 +30,15 @@ const Social = () => {
                            className="form-control"
                            placeholder={col2[i]}
                            onChange={(e) => {
-                               setInput(e.target.value);
-                               userInput.push(e.target.value);
+                               setInput(arr => [...arr, e.target.value])
                            }}
                     />
                 </div>
             </div>
         );
     }
-    console.log(userInput)
     return (
         <>
-            <div className='display-4'>Social</div>
             {rows}
         </>
     )

@@ -13,7 +13,6 @@ const Database = () => {
     }
     return (
         <>
-            <div className='display-4'>Database</div>
             {rows}
         </>
     )

@@ -32,7 +32,6 @@ const ProgrammingLanguages = () => {
     }
     return (
         <>
-            <div className='display-4'>Programming Languages</div>
             {rows}
         </>
     )
