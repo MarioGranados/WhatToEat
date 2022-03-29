@@ -18,6 +18,10 @@ const Hero = () => {
         formInfo.greeting = data[0];
         formInfo.subtitle = data[1];
     }
+
+    let setData2 = (data) => {
+        console.log(data);
+    }
     return(<>
         <div className="container">
             <h1 className='font-weight-bold text-center'>Github Readme Generator</h1>
@@ -43,7 +47,7 @@ const Hero = () => {
             <Testing/>
             <h3 className="mt-5 font-weight-bold ">Social Media</h3>
             <hr/>
-            <Social/>
+            <Social onSubmit={setData2}/>
             <h3 className="mt-5 font-weight-bold ">Extra Stuff</h3>
             <hr/>
             <AddOns/>

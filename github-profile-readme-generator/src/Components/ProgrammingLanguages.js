@@ -25,7 +25,7 @@ const ProgrammingLanguages = () => {
 
     const [checkedState, setCheckedState] = useState(
         new Array(languages.length).fill(false));
-    console.log(checkedState);
+   // console.log(checkedState);
 
         for (let i = 0; i < languages.length; i++) {
             rows.push(
