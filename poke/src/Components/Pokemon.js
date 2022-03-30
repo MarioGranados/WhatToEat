@@ -1,4 +1,22 @@
-const pokemon = () => {
+const pokemon = (props) => {
+    let pokemon = props.poke;
+    console.log('props');
+    console.log(pokemon[0].results);
+    console.log('name');
+    console.log(pokemon[0].results[0].name);
+
+    let searchedPokemon = "ivysaur";
+
+    let searchPokemon = (pokemon, searchedPokemon) => {
+        for(let i = 0; i < pokemon[0].results.length; i++) {
+            if (pokemon[0].results[i].name === searchedPokemon.toLowerCase()) {
+                console.log('name is')
+                console.log(pokemon[0].results[i].name)
+            }
+        }
+    }
+    searchPokemon(pokemon, searchedPokemon);
+
     return(
         <>
             <div className="container">
@@ -16,4 +34,4 @@ const pokemon = () => {
         </>
     )
 }
-export default pokemon()
+export default pokemon
