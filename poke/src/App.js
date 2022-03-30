@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from "react";
+import Hero from "./Components/Hero";
 
 function App() {
     let url = 'https://pokeapi.co/api/v2/pokemon';
@@ -24,7 +24,7 @@ function App() {
 
     return (
         <>
-
+            <Hero/>
         </>
     );
 }
